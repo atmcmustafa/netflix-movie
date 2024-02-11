@@ -39,7 +39,7 @@ const SimilarMovies = ({ id }) => {
     searchMovie();
     window.scrollTo(0, 800);
     if (onlyWidth <= 480) {
-      window.scrollTo(0, 700);
+      window.scrollTo(0, 800);
     } else {
       window.scrollTo(0, 830);
     }
