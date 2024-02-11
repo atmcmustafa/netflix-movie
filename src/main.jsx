@@ -16,23 +16,21 @@ import Login from "./pages/Login.jsx";
 import Register from "./pages/Register.jsx";
 
 ReactDOM.createRoot(document.getElementById("root")).render(
-  <React.StrictMode>
-    <BrowserRouter>
-      <Header />
-      <Routes>
-        <Route element={<Home />} path="/" />
-        <Route element={<ResultPage />} path="/results" />
-        <Route element={<FilmDetail />} path="/details/:id" />
-        <Route element={<Popular />} path="/popular" />
-        <Route element={<TopRated />} path="/toprated" />
-        <Route element={<UpComing />} path="/upcoming" />
-        <Route element={<Recommended />} path="/recommended" />
-        <Route element={<Login />} path="/login" />
-        <Route element={<Register />} path="/register" />
-        <Route element={<Error />} path="*" />
-      </Routes>
+  <BrowserRouter>
+    <Header />
+    <Routes>
+      <Route element={<Home />} path="/" />
+      <Route element={<ResultPage />} path="/results" />
+      <Route element={<FilmDetail />} path="/details/:id" />
+      <Route element={<Popular />} path="/popular" />
+      <Route element={<TopRated />} path="/toprated" />
+      <Route element={<UpComing />} path="/upcoming" />
+      <Route element={<Recommended />} path="/recommended" />
+      <Route element={<Login />} path="/login" />
+      <Route element={<Register />} path="/register" />
+      <Route element={<Error />} path="*" />
+    </Routes>
 
-      <Footer />
-    </BrowserRouter>
-  </React.StrictMode>
+    <Footer />
+  </BrowserRouter>
 );

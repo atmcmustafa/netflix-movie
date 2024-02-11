@@ -1,9 +1,12 @@
-import React from "react";
+import { Helmet } from "react-helmet";
 import { Link } from "react-router-dom";
 
 const Error = () => {
   return (
     <div className="h-screen flex flex-col justify-center items-center ">
+      <Helmet>
+        <title>404 Not Found!</title>
+      </Helmet>
       <h2 className="text-3xl text-center text-white font-bold">
         404 Not Found!
       </h2>

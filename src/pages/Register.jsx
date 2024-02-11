@@ -1,8 +1,17 @@
+import { Helmet } from "react-helmet";
+import { motion } from "framer-motion";
 const Register = () => {
   return (
     <div className="min-h-screen flex items-center justify-center bg-login-image relative">
+      <Helmet>
+        <title>Kayıt Ol</title>
+      </Helmet>
       <div className="absolute left-0 top-0 w-full h-full bg-black/65 z-10"></div>
-      <div className="bg-black/60 relative z-20 text-white px-16 py-12 rounded">
+      <motion.div
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        className="bg-black/60 relative z-20 text-white px-16 py-12 rounded"
+      >
         <h2 className="text-[18px] lg:text-[32px] font-[700] mb-6">Kayıt Ol</h2>
         <div className="flex flex-col w-full gap-4">
           <input
@@ -12,17 +21,17 @@ const Register = () => {
           />
           <input
             placeholder="email"
-            type="text"
+            type="email"
             className="border h-[56px] w-full md:w-[314px] outline-none rounded bg-[#100F0F]  border-[#808080b3] p-4"
           />
           <input
             placeholder="Parola"
-            type="text"
+            type="password"
             className="border h-[56px] w-full md:w-[314px] outline-none rounded bg-[#100F0F]  border-[#808080b3] p-4"
           />
           <input
             placeholder="Telefon"
-            type="text"
+            type="tel"
             className="border h-[56px] w-full md:w-[314px] outline-none rounded bg-[#100F0F]  border-[#808080b3] p-4"
           />
           <button className="h-[40px] w-full bg-[#C11119] rounded font-[400] text-[1rem] mt-4">
@@ -43,7 +52,7 @@ const Register = () => {
             </a>
           </p>
         </div>
-      </div>
+      </motion.div>
     </div>
   );
 };

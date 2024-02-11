@@ -1,4 +1,3 @@
-import React from "react";
 import Result from "./Results";
 
 const ResultPage = ({ results }) => {

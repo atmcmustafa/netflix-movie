@@ -7,7 +7,7 @@ const Result = ({ searchResults }) => {
       <ul className="">
         {searchResults.map((movie) => (
           <Link to={`details/${movie.id}`} key={movie.id}>
-            <li className="bg-gray-800 rounded mb-2  h-20 h-full  flex justify-between cursor-pointer">
+            <li className="bg-gray-800 rounded mb-2 h-full  flex justify-between cursor-pointer">
               <div className="flex flex-col text-start pl-3 justify-center ">
                 <div className="flex gap-2 items-center">
                   <span className="text-[20px]">{movie.title}</span>
@@ -21,10 +21,24 @@ const Result = ({ searchResults }) => {
                 </span>
               </div>
 
-              <img
-                className="w-52 h-32 "
+              {/* <img
+                className="w-full max-w-40  md:max-w-52 h-full max-h-24 "
                 src={`https://image.tmdb.org/t/p/w500/${movie.backdrop_path}`}
-              />
+              /> */}
+
+              {movie.backdrop_path ? (
+                <img
+                  className="w-full max-w-40  md:max-w-52 h-full max-h-24 "
+                  src={`https://image.tmdb.org/t/p/w500/${movie.backdrop_path}`}
+                  alt={movie.title}
+                />
+              ) : (
+                <div className="w-full max-w-40  md:max-w-52  ">
+                  <p className="h-full flex items-center justify-center text-red-500 font-bold">
+                    Resim Bulunamadı
+                  </p>
+                </div>
+              )}
             </li>
           </Link>
         ))}
